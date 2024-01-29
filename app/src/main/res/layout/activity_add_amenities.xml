@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:layout_marginLeft="@dimen/t_10"
+                android:src="@drawable/ic_back" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@id/btnNext"
+            android:layout_below="@id/layoutHeader"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/t_10"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/navigo_medium"
+                android:gravity="start"
+                android:lineSpacingExtra="5sp"
+                android:text="Lets guests know what your place has\nto offer"
+                android:textColor="@color/black"
+                android:textSize="18dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvAmenities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/t_10"
+                android:layout_marginHorizontal="@dimen/t_10" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/app_btn"
+            android:fontFamily="@font/navigo_medium"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+</layout>

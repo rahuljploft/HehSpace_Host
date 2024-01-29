@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/t_10"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/navigo_medium"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/t_20"
+                android:gravity="center"
+                android:text="Add-On Services"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <ImageView
+                android:id="@+id/ivFilter"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_25"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_marginRight="@dimen/t_10"
+                android:src="@drawable/ic_filter" />
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvServices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/t_15"/>
+
+
+
+    </LinearLayout>
+</layout>

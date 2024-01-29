@@ -1,0 +1,871 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_sheet">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/t_35"
+                        android:layout_height="@dimen/t_35"
+                        android:elevation="@dimen/t_12"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/t_20"
+                        android:background="@drawable/grey_bg">
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="@dimen/t_20"
+                            android:layout_height="@dimen/t_20"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/t_5"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_back" />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        app:cardCornerRadius="@dimen/t_30"
+                        android:layout_marginTop="-20dp"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardElevation="@dimen/t_10">
+
+                        <com.smarteist.autoimageslider.SliderView
+                            android:id="@+id/item_picker"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            app:sliderAnimationDuration="900"
+                            app:sliderAutoCycleDirection="back_and_forth"
+                            app:sliderAutoCycleEnabled="true"
+                            app:sliderCircularHandlerEnabled="true"
+                            app:sliderIndicatorAnimationDuration="900"
+                            app:sliderIndicatorGravity="center_horizontal|bottom"
+                            app:sliderIndicatorMargin="5sp"
+                            app:sliderIndicatorOrientation="horizontal"
+                            app:sliderIndicatorPadding="3dp"
+                            app:sliderIndicatorRadius="1.6dp"
+                            app:sliderIndicatorSelectedColor="#00CFE2"
+                            app:sliderIndicatorUnselectedColor="#C8C8C8"
+                            app:sliderScrollTimeInSec="8"
+                            app:sliderStartAutoCycle="true" />
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvCatergory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/t_25"
+                        android:background="@drawable/category_bg"
+                        android:paddingHorizontal="@dimen/t_15"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:layout_marginHorizontal="@dimen/t_15"
+                        android:layout_marginBottom="@dimen/t_10"
+                        android:elevation="@dimen/t_12"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/navigo_regular"
+                        android:text="">
+
+                    </TextView>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginHorizontal="@dimen/t_10"
+                        android:layout_marginBottom="@dimen/t_10"
+                        android:visibility="gone"
+                        android:elevation="@dimen/t_12">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/t_20"
+                    android:orientation="vertical">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/t_15">
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_medium"
+                            android:layout_gravity="center"
+                            android:layout_marginRight="@dimen/t_10"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/black"
+                            android:textSize="16dp" />
+
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvCat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_light"
+                        android:text=""
+                        android:textColor="#818181"
+                        android:textSize="13dp" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_location"/>
+                        <TextView
+                            android:id="@+id/tvLocation"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_light"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textColor="#818181"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:id="@+id/tvRating"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_light"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textColor="#818181"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/colorPrimary" />
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_regular"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="@dimen/t_20"
+                        android:layout_marginHorizontal="@dimen/t_2"
+                        android:layout_marginVertical="@dimen/t_30">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/t_15">
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="@dimen/t_30"
+                                    android:layout_height="@dimen/t_30"
+                                    android:layout_gravity="center"
+                                    app:cardCornerRadius="@dimen/t_20">
+                                    <ImageView
+                                        android:id="@+id/ivImage"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="match_parent"
+                                        android:scaleType="centerCrop"/>
+                                </androidx.cardview.widget.CardView>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_toRightOf="@+id/back_rel"
+                                    android:gravity="center_vertical"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical"
+                                    android:padding="10dp">
+
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:orientation="horizontal">
+
+                                        <TextView
+                                            android:id="@+id/tvHostName"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/navigo_medium"
+                                            android:text=""
+                                            android:textColor="@color/black"
+                                            android:textSize="16dp" />
+
+                                    </RelativeLayout>
+
+                                    <RelativeLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        >
+
+
+
+                                    </RelativeLayout>
+
+                                </LinearLayout>
+                                <RelativeLayout
+                                    android:id="@+id/layoutChat"
+                                    android:layout_width="95dp"
+                                    android:layout_height="30dp"
+                                    android:layout_gravity="center"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/host_bg">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerInParent="true">
+
+                                        <ImageView
+                                            android:layout_width="@dimen/t_15"
+                                            android:layout_height="@dimen/t_15"
+                                            android:layout_gravity="center"
+                                            android:src="@drawable/ic_chat" />
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginLeft="@dimen/t_10"
+                                            android:fontFamily="@font/navigo_regular"
+                                            android:gravity="center"
+                                            android:text="Message"
+                                            android:textColor="@color/colorPrimary"
+                                            android:textSize="13dp" />
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+
+                            </LinearLayout>
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/t_8"
+                                android:layout_marginTop="10dp">
+
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:src="@drawable/ic_checkout"/>
+                                <TextView
+                                    android:id="@+id/tvMobile"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/navigo_light"
+                                    android:layout_marginLeft="@dimen/t_5"
+                                    android:text=""
+                                    android:layout_gravity="center"
+                                    android:textColor="@color/black"
+                                    android:textSize="13dp" />
+
+                            </LinearLayout>
+                            <TextView
+                                android:id="@+id/titleAddon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/navigo_medium"
+                                android:text="Add-On Services"
+                                android:layout_marginTop="@dimen/t_15"
+                                android:textColor="@color/black"
+                                android:textSize="18dp" />
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/rvAddon"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/t_10"/>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/t_10"
+                                android:background="@color/color_grey_line"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/t_5">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Check-in"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvCheckInTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_checkin"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Type"
+                                        android:layout_gravity="center"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp"/>
+                                    <TextView
+                                        android:id="@+id/tvType"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:layout_gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="70dp"
+                                android:scaleType="centerCrop"
+                                android:layout_gravity="center"
+                                android:layout_marginTop="-10dp"
+                                android:layout_marginBottom="-10dp"
+                                android:src="@drawable/ic_line"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/t_5">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Check-out"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvCheckOutTime"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <ImageView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center"
+                                    android:layout_centerInParent="true"
+                                    android:src="@drawable/ic_checkout"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:layout_centerVertical="true"
+                                    android:layout_weight="1"
+                                    android:orientation="vertical">
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Guests"
+                                        android:layout_gravity="center"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp"/>
+                                    <TextView
+                                        android:id="@+id/tvguestCount"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:layout_gravity="center"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp"/>
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="5dp"
+                                android:layout_marginTop="@dimen/t_25"
+                                android:background="@color/color_grey_line"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:layout_marginBottom="@dimen/t_20">
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerVertical="true"
+                                    android:fontFamily="@font/navigo_medium"
+                                    android:text="Price Details"
+                                    android:layout_marginTop="@dimen/t_15"
+                                    android:textColor="@color/black"
+                                    android:textSize="18dp" />
+                                <LinearLayout
+                                    android:id="@+id/layoutWeekly"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_15"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Weekly price"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvWeeklyPrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/layoutDaily"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_15"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Daily price"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvDailyPrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/layoutHourly"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Hourly Price"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvHourlyPrice"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/layoutCleaningFee"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Cleaning Fee"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvCleaningFee"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/layoutExtra"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Extra Service Charge"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvextraService"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <LinearLayout
+                                    android:id="@+id/layoutService"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:text="Service Tax Fee"
+                                        android:layout_weight="1"
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvServiceTax"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="#AAAAAA"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="1dp"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:background="@color/color_grey_line"/>
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/t_10"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text="Total"
+                                        android:layout_weight="1"
+                                        android:textColor="@color/black"
+                                        android:textSize="14dp" />
+
+                                    <TextView
+                                        android:id="@+id/tvGrandTotal"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:fontFamily="@font/navigo_medium"
+                                        android:text=""
+                                        android:textColor="@color/black"
+                                        android:textSize="12dp" />
+
+                                </LinearLayout>
+                            </LinearLayout>
+
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="1dp"
+                                android:layout_marginTop="@dimen/t_10"
+                                android:background="@color/color_grey_line"/>
+
+                            <RelativeLayout
+                                android:id="@+id/layoutCheckAvailability"
+                                android:layout_width="150dp"
+                                android:layout_height="30dp"
+                               android:layout_gravity="center"
+                                android:layout_marginTop="@dimen/t_20"
+                                android:layout_marginBottom="@dimen/t_15"
+                                android:background="@drawable/availability_bg">
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerInParent="true">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="@dimen/t_10"
+                                        android:fontFamily="@font/navigo_regular"
+                                        android:gravity="center"
+                                        android:text="Check Availability"
+                                        android:textColor="@color/colorPrimary"
+                                        android:textSize="13dp" />
+
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                        </LinearLayout>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="About Property"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvDesc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/navigo_light"
+                        android:lineSpacingExtra="5sp"
+                        android:textColor="#818181"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="Amenities"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAmenities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:layout_marginBottom="@dimen/t_20"
+                        android:elevation="@dimen/t_12"/>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            app:behavior_hideable="true"
+            app:cardElevation="@dimen/t_25"
+            android:layout_marginBottom="-15dp"
+            app:cardCornerRadius="30dp"
+            app:behavior_peekHeight="256dp"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/dialog_sheet_bg"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginHorizontal="@dimen/t_20">
+                        <RelativeLayout
+                            android:id="@+id/layoutReject"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:layout_weight="1"
+                            android:layout_marginHorizontal="@dimen/t_5"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/grey_bg">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+
+                                <TextView
+                                    android:id="@+id/tvReject"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/navigo_medium"
+                                    android:gravity="center"
+                                    android:text="Reject"
+                                    android:textColor="@color/black"
+                                    android:textSize="13dp" />
+
+                            </LinearLayout>
+
+                        </RelativeLayout>
+                        <RelativeLayout
+                            android:id="@+id/layoutAccept"
+                            android:layout_width="match_parent"
+                            android:layout_height="36dp"
+                            android:layout_gravity="center"
+                            android:layout_marginHorizontal="@dimen/t_5"
+                            android:layout_weight="1"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:background="@drawable/app_btn">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true">
+
+
+                                <TextView
+                                    android:id="@+id/tvNew"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@font/navigo_medium"
+                                    android:gravity="center"
+                                    android:text="Accept"
+                                    android:textColor="@color/white"
+                                    android:textSize="13dp" />
+
+                            </LinearLayout>
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </RelativeLayout>
+</layout>

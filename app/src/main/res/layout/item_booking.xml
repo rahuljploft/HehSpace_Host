@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_margin="@dimen/t_5"
+            app:cardUseCompatPadding="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/t_20">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/t_45"
+                        android:layout_height="@dimen/t_45"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/t_10">
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                           android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/back_rel"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/navigo_medium"
+                                android:maxLines="1"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="13dp"
+                                tools:ignore="EllipsizeMaxLines" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+
+                            <TextView
+                                android:id="@+id/tvRequestNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="11dp" />
+
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <TextView
+                        android:id="@+id/tvStatus"
+                        android:visibility="visible"
+                        android:layout_width="80dp"
+                        android:layout_height="@dimen/t_20"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/yellow_bg"
+                        android:fontFamily="@font/navigo_regular"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="11dp">
+
+                    </TextView>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t_5"
+                    android:layout_marginHorizontal="@dimen/t_20">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:text="Customer Name:"
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp" />
+
+                        <TextView
+                            android:id="@+id/tvName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_medium"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvDate"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:text=""
+                            android:gravity="end"
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp"/>
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:text=""
+                            android:gravity="end"
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+</layout>

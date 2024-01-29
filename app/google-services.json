@@ -1,0 +1,82 @@
+{
+  "project_info": {
+    "project_number": "347491773133",
+    "project_id": "safespace-499b3",
+    "storage_bucket": "safespace-499b3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347491773133:android:e8ceed7adf3c3b28121784",
+        "android_client_info": {
+          "package_name": "com.hehspace_host"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347491773133-ujv924acmckujvpbv6j72agrhcl6pnrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc7mbd7XXMI35X1sJSJ2aL-ayX_uFRWao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347491773133-ujv924acmckujvpbv6j72agrhcl6pnrg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "347491773133-3ogaq8hj4gnln0nelu4iov6higrt1lu4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HehSpace.app"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:347491773133:android:792322b9f981b886121784",
+        "android_client_info": {
+          "package_name": "com.hehspace_host"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "347491773133-ujv924acmckujvpbv6j72agrhcl6pnrg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCc7mbd7XXMI35X1sJSJ2aL-ayX_uFRWao"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "347491773133-ujv924acmckujvpbv6j72agrhcl6pnrg.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "347491773133-3ogaq8hj4gnln0nelu4iov6higrt1lu4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.HehSpace.app"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

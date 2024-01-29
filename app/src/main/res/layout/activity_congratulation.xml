@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".components.addproperty.CongratulationActivity">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical"
+            android:paddingHorizontal="25dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_congratulations"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/navigo_medium"
+                android:text="Congratulations!"
+                android:layout_marginTop="@dimen/t_15"
+                android:layout_gravity="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="22dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:lineSpacingExtra="@dimen/t_5"
+                android:fontFamily="@font/navigo_light"
+                android:text="Let me be the first to welcome you to HehSpace. Hosts are at the heart of everything we do, and excited for you to experience the magic of hosting."
+                android:layout_marginTop="@dimen/t_15"
+                android:gravity="center"
+                android:textColor="@color/black"
+                android:textSize="12dp" />
+
+            <RelativeLayout
+                android:id="@+id/layoutJump"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="80dp"
+                android:background="@drawable/app_btn">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Let's jump in"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+            </RelativeLayout>
+
+        </LinearLayout>
+    </RelativeLayout>
+</layout>

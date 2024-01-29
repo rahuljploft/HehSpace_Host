@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/map_dummy">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            />
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/t_40"
+            android:layout_height="@dimen/t_40"
+            app:cardCornerRadius="@dimen/t_50"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/t_25"
+            app:cardElevation="@dimen/t_10">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardloc"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t_50"
+            app:cardCornerRadius="@dimen/t_50"
+            app:cardBackgroundColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/t_25"
+            app:cardElevation="@dimen/t_10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/et_bg">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_pin_icon" />
+
+                <TextView
+                    android:id="@+id/etLocation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="10dp"
+                    android:backgroundTint="@color/white"
+                    android:fontFamily="@font/navigo_light"
+                    android:layout_gravity="center"
+                    android:enabled="true"
+                    android:hint="Where your place located?"
+                    android:inputType="textEmailAddress"
+                    android:textColor="@color/black"
+                    android:textSize="14dp" />
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+        <ImageView
+            android:layout_width="@dimen/t_30"
+            android:layout_height="@dimen/t_40"
+            android:layout_gravity="center"
+            android:layout_below="@+id/cardloc"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_pin_icon"
+            app:tint="@color/quantum_googred" />
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/app_btn"
+            android:fontFamily="@font/navigo_medium"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+</layout>

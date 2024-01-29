@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/t_10"
+        app:cardCornerRadius="20dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:background="@drawable/dotted_border">
+
+            <ImageView
+                android:id="@+id/ivImage"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="gone"
+                android:layout_centerInParent="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/img_dummy" />
+
+
+            <ImageView
+                android:id="@+id/ivUpload"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerInParent="true"
+                android:src="@drawable/ic_photo_upload" />
+
+
+            <ImageView
+                android:id="@+id/ivClose"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:padding="@dimen/t_5"
+                android:layout_alignParentEnd="true"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_sideclose" />
+
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</layout>

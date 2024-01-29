@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#18D9C8</color>
+    <color name="purple_700">#18D9C8</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPrimary">#18D9C8</color>
+    <color name="color_00E4E2">#00E4E2</color>
+    <color name="color_grey">#D2D2D2</color>
+    <color name="color_grey_line">#EBEBEB</color>
+    <color name="color_grey_text">#777777</color>
+    <color name="color_yellow">#FFBE1D</color>
+    <color name="color_purple">#706DE7</color>
+    <color name="color_green">#1BCD73</color>
+    <color name="color_blue">#5BB7FC</color>
+    <color name="lightgray">#e7e7e7</color>
+    <color name="dark">#000015</color>
+    <color name="normal_day">#000000</color>
+    <color name="colorMonthDayLabelPaint">#424242</color>
+    <color name="selected_day_background">#18D9C8</color>
+    <color name="selected_day_interval_text">#ffffff</color>
+    <color name="selected_day_text">#ffffff</color>
+    <color name="colorWeekDayLineColor">#d8d8d8</color>
+    <color name="colorWeekEndColor">#000000</color>
+    <color name="colorTest">#1abc9c</color>
+    <color name="colorMonthTextColor">#252525</color>
+    <color name="color_old_day_text_color">#bbbbbb</color>
+</resources>

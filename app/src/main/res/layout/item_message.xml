@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutOther"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bg"
+            android:layout_marginRight="@dimen/t_50"
+            android:layout_marginTop="@dimen/t_10"
+            android:layout_marginLeft="@dimen/t_10"
+            android:orientation="vertical"
+            android:padding="@dimen/t_10">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textAllCaps="true"
+                android:visibility="gone"
+                android:textSize="@dimen/t_12"
+                android:textColor="@color/color_grey_text"/>
+            <TextView
+                android:id="@+id/tvReceiverMsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/t_5"
+                android:text=""
+                android:visibility="visible"
+                android:textSize="@dimen/t_14"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+        <LinearLayout
+            android:id="@+id/layoutSelf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/chat_bg"
+            android:layout_marginLeft="@dimen/t_50"
+            android:layout_gravity="end"
+            android:layout_marginTop="@dimen/t_10"
+            android:layout_marginRight="@dimen/t_10"
+            android:orientation="vertical"
+            android:padding="@dimen/t_10">
+            <TextView
+                android:id="@+id/tvSelfmsg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="@dimen/t_14"
+                android:textColor="@color/black"/>
+        </LinearLayout>
+    </LinearLayout>
+</layout>

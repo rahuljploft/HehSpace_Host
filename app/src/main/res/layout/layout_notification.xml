@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+    <androidx.cardview.widget.CardView android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        app:cardCornerRadius="@dimen/t_10"
+        app:cardBackgroundColor="@color/white"
+        app:cardElevation="@dimen/t_10"
+        android:layout_margin="@dimen/t_10"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/t_10">
+
+
+            <ImageView
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_gravity="top"
+                android:padding="@dimen/t_2"
+                android:src="@drawable/ic__notification"
+                app:tint="@color/colorPrimary" />
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/t_10"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/navigo_medium"
+                    android:lineSpacingExtra="@dimen/t_3"
+                    android:gravity="start"
+                    android:text="Dzintari Cottage"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/navigo_medium"
+                    android:gravity="start"
+                    android:text="NUMBER: 4545454"
+                    android:visibility="gone"
+                    android:textColor="@color/black"
+                    android:textSize="12dp" />
+                <TextView
+                    android:id="@+id/tvdetails"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/navigo_light"
+                    android:lineSpacingExtra="@dimen/t_5"
+                    android:gravity="start"
+                    android:text="Happy to confirm your booking on..."
+                    android:textColor="#BEBEBE"
+                    android:textSize="12dp" />
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/navigo_light"
+                android:gravity="start"
+                android:text="10:05 am"
+                android:layout_gravity="top"
+                android:textColor="@color/colorPrimary"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
+

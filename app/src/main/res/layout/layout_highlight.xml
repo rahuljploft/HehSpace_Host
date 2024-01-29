@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <TextView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/t_36"
+        android:background="@drawable/et_bg"
+        android:paddingHorizontal="@dimen/t_10"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:id="@+id/tvHighlights"
+        android:textSize="14dp"
+        android:fontFamily="@font/navigo_regular"
+        android:layout_margin="@dimen/t_8"
+        android:text="Family-friendly">
+
+    </TextView>
+</layout>
+

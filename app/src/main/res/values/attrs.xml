@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_circle_background_color" format="color" />
+    </declare-styleable>
+
+    <declare-styleable name="BaseRatingBar">
+        <attr name="srb_numStars" format="integer" />
+        <attr name="srb_minimumStars" format="float" />
+        <attr name="srb_rating" format="float" />
+        <attr name="srb_starPadding" format="dimension" />
+        <attr name="srb_drawableEmpty" format="reference" />
+        <attr name="srb_drawableFilled" format="reference" />
+        <attr name="srb_isIndicator" format="boolean" />
+        <attr name="srb_scrollable" format="boolean" />
+        <attr name="srb_clickable" format="boolean" />
+        <attr name="srb_clearRatingEnabled" format="boolean" />
+        <attr name="srb_starWidth" format="dimension" />
+        <attr name="srb_starHeight" format="dimension" />
+        <attr name="srb_stepSize" format="float" />
+    </declare-styleable>
+    <declare-styleable name="ChipView">
+        <attr name="chip_spacing" format="dimension" />
+        <attr name="chip_line_spacing" format="dimension" />
+        <attr name="chip_padding" format="dimension" />
+        <attr name="chip_side_padding" format="dimension" />
+        <attr name="chip_corner_radius" format="dimension" />
+        <attr name="chip_background" format="reference" />
+        <attr name="chip_background_selected" format="reference" />
+        <attr name="chip_background_res" format="reference" />
+    </declare-styleable>
+   <declare-styleable name="Cookie">
+    <attr name="cookieTitleColor" format="color"/>
+    <attr name="cookieMessageColor" format="color"/>
+    <attr name="cookieActionColor" format="color"/>
+    <attr name="cookieBackgroundColor" format="color"/>
+
+    <attr name="cookieTitleSize" format="dimension"/>
+    <attr name="cookieMessageSize" format="dimension"/>
+    <attr name="cookieActionSize" format="dimension"/>
+    <attr name="cookiePadding" format="dimension"/>
+</declare-styleable>
+    <declare-styleable name="AVLoadingIndicatorView">
+        <attr name="minWidth" format="dimension" />
+        <attr name="maxWidth" format="dimension"/>
+        <attr name="minHeight" format="dimension" />
+        <attr name="maxHeight" format="dimension"/>
+        <attr name="indicatorName" format="string"/>
+        <attr name="indicatorColor" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="OtpView">
+        <attr format="integer" name="itemCount"/>
+        <attr format="dimension" name="itemWidth"/>
+        <attr format="dimension" name="itemHeight"/>
+        <attr format="dimension" name="itemRadius"/>
+        <attr format="dimension" name="itemSpacing"/>
+        <attr format="dimension" name="lineWidth"/>
+        <attr format="reference|color" name="lineColor"/>
+        <attr format="enum" name="viewType">
+            <enum name="rectangle" value="0"/>
+            <enum name="line" value="1"/>
+            <enum name="none" value="2"/>
+        </attr>
+        <attr name="android:cursorVisible"/>
+        <attr format="dimension" name="cursorWidth"/>
+        <attr format="reference|color" name="cursorColor"/>
+        <attr name="android:itemBackground"/>
+        <attr format="boolean" name="hideLineWhenFilled"/>
+        <attr format="boolean" name="state_filled"/>
+        <attr format="boolean" name="rtlTextDirection"/>
+        <attr format="string" name="maskingChar"/>
+    </declare-styleable>
+    <declare-styleable name="OtpViewTheme">
+        <attr format="reference" name="otpViewStyle"/>
+    </declare-styleable>
+
+    <declare-styleable name="SwipeRevealLayout">
+        <attr name="dragEdge">
+            <flag name="left" value="1" />
+            <flag name="right" value="2" />
+            <flag name="top" value="4" />
+            <flag name="bottom" value="8" />
+        </attr>
+
+        <attr name="mode">
+            <enum name="normal" value="0" />
+            <enum name="same_level"   value="1" />
+        </attr>
+
+        <attr name="flingVelocity" format="integer" />
+
+        <attr name="minDistRequestDisallowParent" format="dimension" />
+    </declare-styleable>
+
+</resources>

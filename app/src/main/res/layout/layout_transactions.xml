@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/t_20"
+            android:background="@drawable/et_bg_one"
+            android:padding="@dimen/t_10"
+            android:layout_marginTop="@dimen/t_10">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="@dimen/t_40"
+                android:layout_height="@dimen/t_40"
+                app:cardCornerRadius="@dimen/t_10"
+                android:layout_gravity="center"
+                app:cardBackgroundColor="#E0F3F8">
+                <ImageView
+                    android:layout_width="@dimen/t_20"
+                    android:layout_height="@dimen/t_20"
+                    android:layout_gravity="center"
+                    android:src="@drawable/ic_transaction"/>
+
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginHorizontal="@dimen/t_10"
+                android:layout_weight="1"
+                android:layout_gravity="center">
+                <TextView
+                    android:id="@+id/tvBoookingId"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/navigo_regular"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="@color/black"
+                    android:textSize="13dp" />
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/navigo_light"
+                    android:gravity="start"
+                    android:text=""
+                    android:textColor="#BEBEBE"
+                    android:textSize="10dp" />
+
+            </LinearLayout>
+            <TextView
+                android:id="@+id/tvPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/navigo_medium"
+                android:gravity="start"
+                android:text=""
+                android:layout_gravity="center"
+                android:textColor="#07CE00"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

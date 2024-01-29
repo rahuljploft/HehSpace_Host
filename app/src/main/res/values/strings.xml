@@ -1,0 +1,44 @@
+<resources>
+    <string name="app_name">HehSpace Host</string>
+
+    <string name="file_provider_authorities">com.hehspace_host.provider</string>
+    <string name="title_activity_select_category">SelectCategoryActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="google_api_key_new">AIzaSyAKOU_JfykYBj4kDS8ryXPSd0kxsygDcGU</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="default_notification_channel_id">channel_id</string>
+    <string name="fb_login_protocol_scheme">fb479404477065323</string>
+    <string name="facebook_app_id">479404477065323</string>
+    <string name="sans_serif" translatable="false">sans-serif</string>
+    <string-array name="label_calendar_en">
+        <item name="1">M</item>
+        <item name="2">T</item>
+        <item name="3">W</item>
+        <item name="4">T</item>
+        <item name="5">F</item>
+        <item name="6">S</item>
+        <item name="7">S</item>
+    </string-array>
+    <string-array name="sidemenu">
+        <item>Payment Profile</item>
+        <item>Requests</item>
+        <item>My Bookings</item>
+        <item>Earnings</item>
+        <item>Hire Photographer</item>
+        <item>Notification</item>
+        <item>Settings</item>
+        <item>Get Support</item>
+        <item>Logout</item>
+    </string-array>
+
+    <string-array name="spinner">
+        <item>Central Downtown</item>
+        <item>Unique Meetings</item>
+        <item>Team Lounge</item>
+        <item>JACUZZI,TERRACE</item>
+    </string-array>
+
+</resources>

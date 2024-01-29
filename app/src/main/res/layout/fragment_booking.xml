@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:visibility="visible"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/t_10"
+                android:padding="5dp"
+
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/navigo_medium"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/t_20"
+                android:gravity="center"
+                android:text="My Bookings"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+            <ImageView
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:visibility="invisible"
+                android:layout_marginLeft="@dimen/t_10"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+
+        </LinearLayout>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none">
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginHorizontal="@dimen/t_10"
+                android:layout_marginTop="@dimen/t_10">
+                <RelativeLayout
+                    android:id="@+id/layoutAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:paddingHorizontal="@dimen/t_25"
+                    android:layout_marginHorizontal="@dimen/t_5"
+                    android:background="@drawable/app_btn">
+
+
+                    <TextView
+                        android:id="@+id/tvAll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/navigo_regular"
+                        android:text="All"
+                        android:textColor="@color/white"
+                        android:textSize="13dp" />
+
+
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutUpcoming"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:paddingHorizontal="@dimen/t_25"
+                    android:layout_marginHorizontal="@dimen/t_5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/grey_bg">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+                        <TextView
+                            android:id="@+id/tvUpcoming"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:gravity="center"
+                            android:text="Upcoming"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutCompleted"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:paddingHorizontal="@dimen/t_25"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/t_5"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/grey_bg">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/tvCompleted"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:gravity="center"
+                            android:text="Completed"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+                <RelativeLayout
+                    android:id="@+id/layoutCancle"
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/t_20"
+                    android:layout_marginLeft="@dimen/t_5"
+                    android:paddingHorizontal="@dimen/t_25"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/grey_bg">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <TextView
+                            android:id="@+id/tvCancle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:gravity="center"
+                            android:text="Cancelled"
+                            android:textColor="@color/black"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </HorizontalScrollView>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/srlayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/t_10"
+                    android:id="@+id/rvBooking"/>
+
+            </LinearLayout>
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardNoBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/t_10"
+            android:visibility="gone"
+            android:layout_margin="@dimen/t_20"
+            app:cardElevation="@dimen/t_10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/t_10"
+                android:orientation="vertical">
+                <ImageView
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:padding="@dimen/t_10"
+                    android:layout_gravity="center"
+                    android:src="@drawable/nobooking"
+                    app:tint="#F0FD1403" />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/navigo_regular"
+                    android:layout_gravity="center"
+                    android:layout_marginHorizontal="@dimen/t_20"
+                    android:gravity="center"
+                    android:text="No Booking Found!"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/t_15" />
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

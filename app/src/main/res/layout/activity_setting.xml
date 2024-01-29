@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/layoutHeader"
+            android:layout_width="match_parent"
+            android:layout_height="50dp">
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/t_10"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:fontFamily="@font/navigo_medium"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="@dimen/t_20"
+                android:gravity="center"
+                android:text="Settings"
+                android:textColor="@color/black"
+                android:textSize="20dp" />
+
+            <ImageView
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/t_10"
+                android:padding="5dp"
+                android:visibility="invisible"
+                android:src="@drawable/ic_back" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/t_10"
+            android:orientation="vertical"
+            android:layout_below="@+id/layoutHeader">
+            <LinearLayout
+                android:id="@+id/layoutChangePassword"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/t_5"
+                android:padding="@dimen/t_10">
+
+
+                <ImageView
+                    android:layout_width="@dimen/t_30"
+                    android:layout_height="@dimen/t_30"
+                    android:layout_gravity="top"
+                    android:padding="@dimen/t_2"
+                    android:src="@drawable/locknew"
+                    app:tint="@color/colorPrimary" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/t_10"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="start"
+                        android:text="Change Password"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/t_10"
+                android:background="@color/color_grey_line"/>
+
+            <LinearLayout
+                android:id="@+id/layoutPP"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="@dimen/t_5"
+                android:padding="@dimen/t_10">
+
+
+                <ImageView
+                    android:layout_width="@dimen/t_30"
+                    android:layout_height="@dimen/t_30"
+                    android:layout_gravity="top"
+                    android:padding="@dimen/t_2"
+                    android:src="@drawable/tncnew"
+                    app:tint="@color/colorPrimary" />
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginHorizontal="@dimen/t_10"
+                    android:layout_weight="1"
+                    android:layout_gravity="center">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="start"
+                        android:text="Terms &amp; Privacy Policy"
+                        android:textColor="@color/black"
+                        android:textSize="15dp" />
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginHorizontal="@dimen/t_10"
+                android:background="@color/color_grey_line"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/t_20"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:padding="@dimen/t_10"
+                android:src="@drawable/logo_color" />
+            <TextView
+                android:id="@+id/versioncode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/navigo_medium"
+                android:gravity="start"
+                android:layout_gravity="center"
+                android:text="Version 1.0"
+                android:textColor="@color/black"
+                android:textSize="15dp" />
+
+
+        </LinearLayout>
+    </RelativeLayout>
+
+
+</layout>

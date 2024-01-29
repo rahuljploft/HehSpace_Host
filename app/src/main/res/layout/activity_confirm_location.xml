@@ -1,0 +1,311 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <fragment
+            android:id="@+id/map"
+            android:name="com.google.android.gms.maps.SupportMapFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/t_40"
+            android:layout_height="@dimen/t_40"
+            app:cardCornerRadius="@dimen/t_50"
+            app:cardBackgroundColor="@color/white"
+            android:layout_margin="@dimen/t_25"
+            app:cardElevation="@dimen/t_10">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_back" />
+
+        </androidx.cardview.widget.CardView>
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="@dimen/t_50"
+            app:cardBackgroundColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_margin="@dimen/t_25"
+            app:cardElevation="@dimen/t_10">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginHorizontal="@dimen/t_20"
+
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/t_10"
+                    android:layout_marginTop="20dp"
+                    android:fontFamily="@font/navigo_medium"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="Confirm your address"
+                    android:textColor="@color/black"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Flat / Building / House Number"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etFlat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text=""
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t_10"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Street"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etStreet"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text=""
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Flat, suite. etc (optional)"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text="Parath Sarthi Regency"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="City"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etCity"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text=""
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="State (optional)"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etState"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text="Rajasthan"
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Postcode"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etPostcode"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text=""
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text="Country/Region"
+                        android:textColor="#8A8A8A"
+                        android:textSize="11dp" />
+                    <EditText
+                        android:id="@+id/etCountry"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_gravity="center"
+                        android:enabled="false"
+                        android:text=""
+                        android:inputType="textEmailAddress"
+                        android:textColor="@color/black"
+                        android:textSize="14dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/t_10"
+                    android:fontFamily="@font/navigo_medium"
+                    android:text="We'll only share your address with guests who are booked as outlined in our Privacy Policy"
+                    android:textColor="#8A8A8A"
+                    android:layout_marginBottom="@dimen/t_10"
+                    android:layout_marginTop="@dimen/t_10"
+                    android:textSize="11dp" />
+
+                <LinearLayout
+                    android:id="@+id/layoutGoToMap"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/t_20"
+                    android:visibility="gone"
+                    android:layout_marginTop="5dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="@dimen/t_20"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_mapdire"
+                        app:tint="@color/colorPrimary" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_light"
+                        android:layout_marginLeft="@dimen/t_5"
+                        android:text="Go To Map"
+                        android:layout_gravity="center"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="13dp" />
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:id="@+id/btnNext"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginHorizontal="25dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="20dp"
+            android:background="@drawable/app_btn"
+            android:fontFamily="@font/navigo_medium"
+            android:gravity="center"
+            android:text="Next"
+            android:textColor="@color/white"
+            android:textSize="16dp" />
+
+    </RelativeLayout>
+
+
+</layout>

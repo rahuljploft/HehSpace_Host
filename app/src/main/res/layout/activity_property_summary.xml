@@ -1,0 +1,417 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/bottom_sheet">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <RelativeLayout
+                        android:layout_width="@dimen/t_35"
+                        android:layout_height="@dimen/t_35"
+                        android:elevation="@dimen/t_12"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:orientation="vertical"
+                        android:layout_marginTop="@dimen/t_20"
+                        android:background="@drawable/grey_bg">
+                        <ImageView
+                            android:id="@+id/ivBack"
+                            android:layout_width="@dimen/t_20"
+                            android:layout_height="@dimen/t_20"
+                            android:layout_centerVertical="true"
+                            android:layout_centerInParent="true"
+                            android:layout_marginRight="@dimen/t_5"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_back" />
+
+                    </RelativeLayout>
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="270dp"
+                        app:cardCornerRadius="@dimen/t_30"
+                        app:cardBackgroundColor="@color/white"
+                        android:layout_marginTop="-20dp">
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <TextView
+                        android:id="@+id/tvCatergory"
+                        android:layout_width="wrap_content"
+                        android:layout_height="@dimen/t_25"
+                        android:background="@drawable/category_bg"
+                        android:paddingHorizontal="@dimen/t_15"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="13dp"
+                        android:visibility="gone"
+                        android:layout_marginHorizontal="@dimen/t_15"
+                        android:layout_marginBottom="@dimen/t_10"
+                        android:elevation="@dimen/t_12"
+                        android:layout_gravity="bottom"
+                        android:fontFamily="@font/navigo_regular"
+                        android:text="">
+
+                    </TextView>
+
+
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="@dimen/t_20"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/tvPropertTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text=""
+                        android:layout_marginTop="@dimen/t_10"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <TextView
+                        android:id="@+id/tvcat"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_light"
+                        android:text=""
+                        android:visibility="gone"
+                        android:textColor="#818181"
+                        android:textSize="13dp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvCategory"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:visibility="visible"
+                        android:elevation="@dimen/t_12">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_location"/>
+                        <TextView
+                            android:id="@+id/tvAddress"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_light"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textColor="#818181"
+                            android:textSize="13dp" />
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:visibility="gone"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_star"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_light"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text="4.5 (432 Reviews)"
+                            android:layout_gravity="center"
+                            android:textColor="#818181"
+                            android:textSize="13dp" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/t_15"
+                            android:layout_height="@dimen/t_15"
+                            android:layout_gravity="center"
+                            android:src="@drawable/ic_clock"
+                            app:tint="@color/colorPrimary" />
+                        <TextView
+                            android:id="@+id/tvTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_regular"
+                            android:layout_marginLeft="@dimen/t_5"
+                            android:text=""
+                            android:layout_gravity="center"
+                            android:textColor="@color/black"
+                            android:textSize="10dp" />
+
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="Highlights"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvHighlights"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:elevation="@dimen/t_12">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="About"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvdescription"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/navigo_light"
+                        android:lineSpacingExtra="@dimen/t_5"
+                        android:text=""
+                        android:textColor="#818181"
+                        android:textSize="13dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="Amenities"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAmenities"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:elevation="@dimen/t_12">
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <RelativeLayout
+                        android:id="@+id/layoutAddon"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/t_15">
+
+                        <TextView
+                            android:id="@+id/titleAddons"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_medium"
+                            android:text="Add-On Services"
+                            android:textColor="@color/black"
+                            android:textSize="18dp"
+                            android:visibility="visible" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="@font/navigo_medium"
+                            android:text="ALL"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_14"
+                            android:visibility="visible" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvAddons"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:visibility="visible"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:elevation="@dimen/t_12">
+
+                    </androidx.recyclerview.widget.RecyclerView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="Cleaning fee"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t_50"
+                        android:layout_marginTop="@dimen/t_10"
+                        app:cardElevation="@dimen/t_5"
+                        android:layout_marginHorizontal="@dimen/t_5"
+                        android:layout_marginBottom="@dimen/t_5"
+                        app:cardCornerRadius="@dimen/t_15">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/t_20"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text="Fee"
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+
+                            <TextView
+                                android:id="@+id/tvCleaningFee"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginHorizontal="@dimen/t_20"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="16dp" />
+                        </RelativeLayout>
+                    </androidx.cardview.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/navigo_medium"
+                        android:text="Gallery"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:textColor="@color/black"
+                        android:textSize="18dp" />
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/rvGallery"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:layout_marginTop="@dimen/t_10"
+                        android:layout_marginBottom="@dimen/t_20"
+                        android:elevation="@dimen/t_12">
+                    </androidx.recyclerview.widget.RecyclerView>
+                </LinearLayout>
+            </LinearLayout>
+        </androidx.core.widget.NestedScrollView>
+        <androidx.cardview.widget.CardView
+            android:id="@+id/bottom_sheet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            app:behavior_hideable="true"
+            app:cardElevation="20dp"
+            android:layout_marginBottom="-15dp"
+            app:cardCornerRadius="30dp"
+            app:behavior_peekHeight="256dp"
+            app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+            <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="80dp"
+                android:background="@drawable/dialog_sheet_bg"
+                android:orientation="horizontal">
+                <RelativeLayout
+                    android:id="@+id/layoutHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp">
+
+                    <TextView
+                        android:id="@+id/tvPrice"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/t_20"
+                        android:layout_marginLeft="@dimen/t_10"
+                        android:fontFamily="@font/navigo_medium"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black"
+                        android:textSize="16dp" />
+
+                    <RelativeLayout
+                        android:id="@+id/layoutPublish"
+                        android:layout_width="190dp"
+                        android:layout_height="40dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_marginTop="@dimen/t_15"
+                        android:layout_marginRight="@dimen/t_10"
+                        android:background="@drawable/app_btn">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <TextView
+                                android:id="@+id/tvtitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/t_10"
+                                android:fontFamily="@font/navigo_medium"
+                                android:gravity="center"
+                                android:text="Create Listing"
+                                android:textColor="@color/white"
+                                android:textSize="16dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+    </RelativeLayout>
+
+</layout>

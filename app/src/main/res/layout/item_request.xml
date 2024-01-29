@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardRequest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:elevation="10dp"
+            app:cardBackgroundColor="@color/white"
+            app:cardCornerRadius="10dp"
+            android:layout_marginHorizontal="@dimen/t_1"
+            android:layout_marginVertical="@dimen/t_8"
+            app:cardUseCompatPadding="true">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="@dimen/t_20">
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="@dimen/t_45"
+                        android:layout_height="@dimen/t_45"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/t_10">
+                            <ImageView
+                                android:id="@+id/ivImage"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:scaleType="centerCrop"/>
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@+id/back_rel"
+                        android:gravity="center_vertical"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="10dp">
+
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/tvTitle"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:ellipsize="marquee"
+                                android:fontFamily="@font/navigo_medium"
+                                android:singleLine="true"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="13dp" />
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/tvrequestId"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text=""
+                                android:textColor="@color/black"
+                                android:textSize="11dp">
+
+                            </TextView>
+
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                    <RelativeLayout
+                        android:id="@+id/layoutChat"
+                        android:layout_width="95dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/host_bg">
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true">
+
+                            <ImageView
+                                android:layout_width="@dimen/t_15"
+                                android:layout_height="@dimen/t_15"
+                                android:layout_gravity="center"
+                                android:src="@drawable/ic_chat" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/t_10"
+                                android:fontFamily="@font/navigo_medium"
+                                android:gravity="center"
+                                android:text="Message"
+                                android:textColor="@color/colorPrimary"
+                                android:textSize="13dp" />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:visibility="visible"
+                    android:layout_width="100dp"
+                    android:layout_height="@dimen/t_20"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:background="@drawable/yellow_bg"
+                    android:layout_marginRight="@dimen/t_20"
+                    android:fontFamily="@font/navigo_regular"
+                    android:gravity="center"
+                    android:layout_gravity="end"
+                    android:text="ACCEPTED"
+                    android:textColor="@color/white"
+                    android:textSize="13dp">
+
+                </TextView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t_5"
+                    android:layout_marginHorizontal="@dimen/t_10">
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.2"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:orientation="vertical">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:text="Customer Name:"
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp"/>
+                        <TextView
+                            android:id="@+id/tvCustomername"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_medium"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textColor="@color/black"
+                            android:textSize="15dp"/>
+
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentEnd="true"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/tvrequestedDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:text=""
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp"/>
+                        <TextView
+                            android:id="@+id/tvRequestedTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_regular"
+                            android:singleLine="true"
+                            android:ellipsize="marquee"
+                            android:text=""
+                            android:textColor="#AAAAAA"
+                            android:textSize="12dp"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="10dp"
+                    android:background="#6AACACAC" />
+
+                <LinearLayout
+                    android:id="@+id/click_rel"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="@dimen/t_10"
+                    android:layout_marginHorizontal="@dimen/t_10"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvReject"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t_30"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/grey_bg"
+                        android:fontFamily="@font/navigo_regular"
+                        android:gravity="center"
+                        android:text="Reject"
+                        android:layout_weight="1"
+                        android:layout_gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="13dp">
+
+                    </TextView>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="match_parent"
+                        android:layout_centerInParent="true"
+                        android:layout_marginHorizontal="@dimen/t_10"
+                        android:layout_gravity="center"
+                        android:layout_centerVertical="true"
+                        android:layout_marginVertical="@dimen/t_5"
+                        android:background="#6AACACAC" />
+
+                    <TextView
+                        android:id="@+id/tvAccept"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/t_30"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_weight="1"
+                        android:background="@drawable/app_btn"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/navigo_regular"
+                        android:gravity="center"
+                        android:text="Accept"
+                        android:textColor="@color/white"
+                        android:textSize="13dp">
+
+                    </TextView>
+                </LinearLayout>
+
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+
+    </LinearLayout>
+</layout>

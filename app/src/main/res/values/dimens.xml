@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="t_1">1dp</dimen>
+    <dimen name="t_2">2dp</dimen>
+    <dimen name="t_3">3dp</dimen>
+    <dimen name="t_4">4dp</dimen>
+    <dimen name="t_5">5dp</dimen>
+    <dimen name="t_6">6dp</dimen>
+    <dimen name="t_7">7dp</dimen>
+    <dimen name="t_8">8dp</dimen>
+    <dimen name="t_9">9dp</dimen>
+    <dimen name="t_10">10dp</dimen>
+    <dimen name="t_11">11dp</dimen>
+    <dimen name="t_12">12dp</dimen>
+    <dimen name="text_size_day">14sp</dimen>
+    <dimen name="text_size_month">22sp</dimen>
+    <dimen name="text_size_day_name">11sp</dimen>
+    <dimen name="header_month_height">80dp</dimen>
+    <dimen name="selected_day_radius">18dp</dimen>
+    <dimen name="calendar_height">320dp</dimen>
+    <dimen name="t_13">13dp</dimen>
+    <dimen name="t_14">14dp</dimen>
+    <dimen name="t_15">15dp</dimen>
+    <dimen name="t_16">16dp</dimen>
+    <dimen name="t_17">17dp</dimen>
+    <dimen name="t_18">18dp</dimen>
+    <dimen name="t_19">19dp</dimen>
+    <dimen name="t_20">20dp</dimen>
+    <dimen name="t_21">21dp</dimen>
+    <dimen name="t_22">22dp</dimen>
+    <dimen name="t_23">23dp</dimen>
+    <dimen name="t_24">24dp</dimen>
+    <dimen name="t_25">25dp</dimen>
+    <dimen name="t_26">26dp</dimen>
+    <dimen name="t_27">27dp</dimen>
+    <dimen name="t_28">28dp</dimen>
+    <dimen name="t_29">29dp</dimen>
+    <dimen name="t_30">30dp</dimen>
+    <dimen name="t_31">31dp</dimen>
+    <dimen name="t_32">32dp</dimen>
+    <dimen name="t_33">33dp</dimen>
+    <dimen name="t_34">34dp</dimen>
+    <dimen name="t_35">35dp</dimen>
+    <dimen name="t_36">36dp</dimen>
+    <dimen name="t_37">37dp</dimen>
+    <dimen name="t_38">38dp</dimen>
+    <dimen name="t_39">39dp</dimen>
+    <dimen name="t_40">40dp</dimen>
+    <dimen name="t_41">41dp</dimen>
+    <dimen name="t_42">42dp</dimen>
+    <dimen name="t_43">43dp</dimen>
+    <dimen name="t_44">44dp</dimen>
+    <dimen name="t_45">45dp</dimen>
+    <dimen name="t_46">46dp</dimen>
+    <dimen name="t_47">47dp</dimen>
+    <dimen name="t_48">48dp</dimen>
+    <dimen name="t_49">49dp</dimen>
+    <dimen name="t_50">50dp</dimen>
+    <dimen name="shape_corner_size_small_component">4dp</dimen>
+    <dimen name="shape_corner_size_medium_component">4dp</dimen>
+    <dimen name="shape_corner_size_large_component">0dp</dimen>
+
+    <dimen name="design_textinput_caption_translate_y">5dp</dimen>
+    <dimen name="min_touch_target_size">48dp</dimen>
+
+    <dimen name="textinput_outline_box_expanded_padding">16dp</dimen>
+
+    <dimen name="textinput_box_corner_radius_small">0dp</dimen>
+    <dimen name="textinput_box_corner_radius_medium">4dp</dimen>
+    <dimen name="textinput_box_stroke_width_default">1dp</dimen>
+    <dimen name="textinput_box_stroke_width_focused">2dp</dimen>
+    <dimen name="textinput_box_label_cutout_padding">4dp</dimen>
+
+    <!-- The icon views' minimum width is 48dp and since each icon is 24dp wide we need a 4dp margin
+         to have the appropriate spacing before and after each icon. -->
+    <dimen name="textinput_end_icon_margin_start">4dp</dimen>
+    <dimen name="textinput_start_icon_margin_end">4dp</dimen>
+
+    <dimen name="exposed_dropdown_menu_popup_elevation">8dp</dimen>
+    <dimen name="exposed_dropdown_menu_popup_vertical_padding">8dp</dimen>
+    <dimen name="exposed_dropdown_menu_popup_vertical_offset">-8dp</dimen>
+
+    <dimen name="button_text_size">12sp</dimen>
+    <dimen name="otp_view_item_size">50dp</dimen>
+    <dimen name="otp_view_item_size_width">50dp</dimen>
+    <dimen name="otp_view_item_radius">5dp</dimen>
+    <dimen name="otp_view_item_spacing">5dp</dimen>
+    <dimen name="otp_view_item_line_width">2dp</dimen>
+    <dimen name="otp_view_cursor_width">2dp</dimen>
+
+    <dimen name="WheelItemTextSize">16sp</dimen>
+    <dimen name="WheelItemSpace">10dp</dimen>
+    <dimen name="WheelIndicatorSize">25dp</dimen>
+    <dimen name="WheelMargins">8dp</dimen>
+    <dimen name="wheel_spacing">40dp</dimen>
+    <dimen name="wheelSelectorHeight">30dp</dimen>
+
+    <dimen name="radiusTop">16dp</dimen>
+    <dimen name="paddingTop">16dp</dimen>
+
+    <dimen name="text_title_size">16sp</dimen>
+    <dimen name="text_message_size">14sp</dimen>
+
+    <dimen name="chip_padding">2dp</dimen>
+    <dimen name="chip_side_padding">6dp</dimen>
+    <dimen name="chip_spacing">4dp</dimen>
+    <dimen name="chip_line_spacing">4dp</dimen>
+    <dimen name="chip_corner_radius">16dp</dimen>
+
+    <dimen name="default_padding">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    \
+</resources>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_groupcheckede"/>
+            <TextView
+                android:id="@+id/tvService"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/navigo_light"
+                android:layout_marginLeft="@dimen/t_8"
+                android:text="Cook"
+                android:layout_gravity="center"
+                android:textColor="@color/black"
+                android:textSize="13dp" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</layout>
+

@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <com.hehspace_host.util.SwipeRevealLayout
+        xmlns:card_view="http://schemas.android.com/tools"
+        android:id="@+id/swipe_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        xmlns:tools="http://schemas.android.com/tools"
+        app:dragEdge="right"
+        app:mode="same_level">
+        <FrameLayout
+            android:id="@+id/delete_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_gravity="center"
+                android:layout_margin="5dp"
+                android:background="#ffcc0000"
+                card_view:cardCornerRadius="10dp"
+                card_view:cardElevation="4dp">
+                <TextView
+                    android:id="@+id/delete_text"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:background="@android:color/holo_red_dark"
+                    android:gravity="center"
+                    android:text="Delete"
+                    android:visibility="visible"
+                    android:textColor="@android:color/white" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/contact_id"
+                    android:layout_width="70dp"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:visibility="gone" />
+            </androidx.cardview.widget.CardView>
+        </FrameLayout>
+
+        <FrameLayout
+            android:id="@+id/front_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:id="@+id/layoutChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/t_20"
+                    android:layout_marginHorizontal="@dimen/t_10">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="center"
+                        app:cardCornerRadius="@dimen/t_50">
+
+                        <ImageView
+                            android:id="@+id/ivImage"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:scaleType="centerCrop" />
+                    </androidx.cardview.widget.CardView>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginHorizontal="@dimen/t_10"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content">
+
+                            <TextView
+                                android:id="@+id/username"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text=""
+                                android:singleLine="true"
+                                android:ellipsize="marquee"
+                                android:layout_weight="1"
+                                android:layout_marginRight="@dimen/t_10"
+                                android:textColor="@color/black"
+                                android:textSize="15dp" />
+
+                            <TextView
+                                android:id="@+id/tvdate"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:fontFamily="@font/navigo_regular"
+                                android:text=""
+                                android:textColor="@color/color_green"
+                                android:textSize="10dp" />
+
+                        </LinearLayout>
+
+                        <TextView
+                            android:id="@+id/tvHostName"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_light"
+                            android:text=""
+                            android:textColor="@color/color_grey_text"
+                            android:textSize="12dp" />
+                        <TextView
+                            android:id="@+id/tvRequestNo"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/navigo_light"
+                            android:text=""
+                            android:textColor="@color/color_grey_text"
+                            android:textSize="12dp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/color_grey_line"
+                    android:layout_marginTop="@dimen/t_10"
+                    android:layout_marginHorizontal="@dimen/t_10"/>
+
+            </LinearLayout>
+        </FrameLayout>
+
+    </com.hehspace_host.util.SwipeRevealLayout>
+
+</layout>

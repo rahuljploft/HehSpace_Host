@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.yarolegovich.discretescrollview.DiscreteScrollView
+        android:layout_width="match_parent"
+        android:id="@+id/discreateview"
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".components.property.ImageSliderActivity">
+
+    </com.yarolegovich.discretescrollview.DiscreteScrollView>
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="@dimen/t_30"
+        android:layout_height="@dimen/t_30"
+        android:layout_marginLeft="@dimen/t_10"
+        android:padding="5dp"
+        android:src="@drawable/ic_back"
+        android:layout_marginTop="@dimen/t_10"
+        app:tint="@color/white" />
+
+</RelativeLayout>

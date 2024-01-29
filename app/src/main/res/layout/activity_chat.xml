@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".components.chat.ChatActivity">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t_50"
+            android:paddingHorizontal="@dimen/t_10"
+            android:background="@color/colorPrimary"
+            android:orientation="horizontal">
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/t_30"
+                android:layout_height="@dimen/t_30"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:padding="5dp"
+                android:src="@drawable/ic_back"
+                app:tint="@color/white" />
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                app:cardCornerRadius="@dimen/t_50">
+
+                <ImageView
+                    android:id="@+id/ivImage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="centerCrop"/>
+            </androidx.cardview.widget.CardView>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="10dp"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tvPropertyName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/navigo_regular"
+                        android:text=""
+                        android:singleLine="true"
+                        android:ellipsize="marquee"
+                        android:textColor="@color/white"
+                        android:textSize="15dp" />
+
+                    <TextView
+                        android:id="@+id/username"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/navigo_regular"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="12dp" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="3dp"
+                    android:fontFamily="@font/navigo_regular"
+                    android:text="Bali, Indonesia"
+                    android:textColor="@color/white"
+                    android:textSize="13dp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/spRefresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                >
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvChat"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentBottom="true"
+                    app:reverseLayout="true"
+                    app:stackFromEnd="true">
+
+                </androidx.recyclerview.widget.RecyclerView>
+                <RelativeLayout
+                    android:id="@+id/rlNoFound"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="80dp"
+                            android:layout_height="80dp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/no_notification" />
+
+                        <TextView
+                            android:id="@+id/tvTitle"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:fontFamily="@font/navigo_medium"
+                            android:gravity="start"
+                            android:text="No Chat Found"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/t_20" />
+
+                    </LinearLayout>
+                </RelativeLayout>
+            </RelativeLayout>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/t_50"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="@dimen/t_10"
+            android:layout_marginTop="@dimen/t_10"
+            android:layout_marginEnd="@dimen/t_10"
+            android:layout_marginBottom="@dimen/t_10"
+            app:cardCornerRadius="@dimen/t_10"
+            app:cardElevation="@dimen/t_5">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <EditText
+                    android:id="@+id/etMessage"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:backgroundTint="@color/white"
+                    android:textSize="@dimen/t_15"
+                    android:inputType="textCapWords"
+                    android:textColor="@color/black"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/navigo_regular"
+                    android:hint="Type a message here ..."/>
+
+                <RelativeLayout
+                    android:layout_width="@dimen/t_50"
+                    android:layout_height="@dimen/t_50"
+                    android:background="@color/colorPrimary">
+
+                    <ImageView
+                        android:id="@+id/ivSend"
+                        android:layout_width="@dimen/t_40"
+                        android:layout_height="@dimen/t_40"
+                        android:layout_centerInParent="true"
+                        android:padding="@dimen/t_8"
+                        android:rotation="320"
+                        android:src="@drawable/ic_sendmessage"
+                        app:tint="@color/white" />
+
+                </RelativeLayout>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+    </LinearLayout>
+</layout>

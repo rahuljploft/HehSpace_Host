@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+
+    </data>
+
+    <LinearLayout
+        android:id="@+id/ll_main"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingHorizontal="20dp">
+
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/txtDrawerName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/navigo_medium"
+                android:singleLine="true"
+                android:text="fdsfdgd"
+                android:textColor="@color/white"
+                android:textSize="16dp" />
+            <TextView
+                android:id="@+id/tvStatus"
+                android:visibility="gone"
+                android:layout_width="80dp"
+                android:layout_height="@dimen/t_25"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:background="@drawable/red_bg"
+                android:fontFamily="@font/navigo_regular"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:text="Pending"
+                android:textColor="@color/white"
+                android:textSize="11dp">
+
+            </TextView>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cust_view"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="@dimen/t_8"
+    android:gravity="left|center_vertical"
+    android:layout_marginHorizontal="10dp"
+    android:textColor="@android:color/black"
+    android:textSize="@dimen/t_15"
+    android:text=""
+    android:paddingLeft="4dp"
+    android:textIsSelectable="false"/>
